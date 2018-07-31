@@ -1,8 +1,9 @@
 
 ### 文本间隔
  -  word-spacing 属性可以改变字（单词）之间的标准间隔。其默认值 normal 与设置值为 0 是一样的。
-    +  p { word-spacing:30px; }
-
+ ```
+  p { word-spacing:30px; }
+ ```
 
 ### 列表样式（ul）
 - 对list-style-type属性的常见属性值的描述
