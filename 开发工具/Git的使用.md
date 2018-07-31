@@ -14,14 +14,14 @@
   在项目目录右键打开 git bash
   命令: `git init`
 
-###自报家门
+### 自报家门
   就是在git中设置当前使用的用户是谁
   每一次备份都会把当前备份者的信息存储起来
   + 命令: 
      配置用户名:`git config --global user.name "xiaoming"`
      配置邮箱: `git config --global user.email "xm@sina.com"`
 
-###把代码存储到.git仓储中
+### 把代码存储到.git仓储中
    + 把代码放到仓储的门口
       `git add ./readme.md` 所指定的文件放到大门口
       `git add ./` 把所有的修改的文件添加到大门口
@@ -31,7 +31,7 @@
 ### 可以一次性把我们修改的代码放到房间里(版本库)
    `git commit --all -m "一些说明"`
     --all 表示是把所有修改的文件提交到版本库
-###查看当前的状态
+### 查看当前的状态
   可以用来查看当前代码有没有被放到仓储中去
   命令: `git status`
 ###git中的忽略文件
@@ -45,11 +45,11 @@
          ` /js` 会忽略js目录里的所有文件
          ` /js/*.js` 会忽略js目录下所有js文件
          
-###查看日志
+### 查看日志
           `git log` 查看历史提交的日志
           `git log --oneline` 可以看到简洁版的日志
           
-###回退到指定的版本
+### 回退到指定的版本
        `git reset --hard Head~0`
         表示回退到上一次代码提交时的状态
 	   `git reset --hard Head~1`
@@ -58,26 +58,26 @@
         可以通过版本号精确的回退到某一次提交时的状态
 `git reflog`
        可以看到每一次切换版本的记录:可以看到所有提交的版本号
-###分支
+### 分支
      默认是有一个主分支master
-###创建分支
+### 创建分支
       `git branch dev`
       创建了一个dev分支
       在刚创建时dev分支里的东西和master分支里的东西是一样的
-###切换分支
+### 切换分支
    `git checkout dev`
       切换到指定的分支,这里的切换到名为dev的分支
     `git branch` 可以查看当前有哪些分支
-###合并分支
+### 合并分支
    `git merge dev`
     合并分支内容,把当前分支与指定的分支(dev),进行合并
     当前分支指的是`git branch`命令输出的前面有*号的分支
 合并时如果有冲突，需要手动去处理，处理后还需要再提交一次.
-###GitHub 
+### GitHub 
    https://github.com
   不是git,只是一个网站
   只不过这个网站提供了允许别通过git上传代码的功能
-###提交代码到github(当作git服务器来用)
+### 提交代码到github(当作git服务器来用)
    `git push [地址] master`
    示例: `git push https://github.com/huoqishi/test112.git master master`
    会把当前分支的内容上传到远程的master分支上
