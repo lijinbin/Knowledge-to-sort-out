@@ -1,4 +1,4 @@
-##点击input时value变换
+## 点击input时value变换
 
 
 ### 点击input时value清空，当input失去焦点时value返回初始值
