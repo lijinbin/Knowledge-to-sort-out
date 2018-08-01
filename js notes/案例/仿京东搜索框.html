@@ -1,12 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<input type="text" id="text" value="金融"/><input type="button" value="搜索"/>
+<script>
 
-### 点击input时value清空，当input失去焦点时value返回初始值
 
-```
-  <input id="txt" type="text" name="" placeholder="" value="Enter keyword to search products">
-```
-
-```
- $(function(){
     var text=document.getElementById("text").value;
     var input=document.getElementById("text");
     var flag=true;
@@ -22,5 +24,7 @@
             flag=false;
         }
     };
-})
-```
+
+</script>
+</body>
+</html>
