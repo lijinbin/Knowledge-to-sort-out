@@ -15,10 +15,10 @@
   + gt(3)索引大于3的所有元素
   + lt(3)索引小于3的所有的元素
   ```
-   $("#uu>li:eq(4)").css("backgroundColor","red");
-   $("#uu>li:gt(4)").css("backgroundColor","red");
-   $("#uu>li:lt(4)").css("backgroundColor","red");
-    ```
+    $("#uu>li:eq(4)").css("backgroundColor","red");
+    $("#uu>li:gt(4)").css("backgroundColor","red");
+    $("#uu>li:lt(4)").css("backgroundColor","red");
+   ```
 ### 获取兄弟元素的几个方法
 ```
   $(function () {
