@@ -11,9 +11,9 @@
    +   .val()方法.设置input标签中value的值,类似于value
    +  .css()方法,.设置元素的样式,类似于style
 ### jQuery索引选择器
-  + eq(3)获取索引的元素
-  + gt(3)索引大于3的所有元素
-  + lt(3)索引小于3的所有的元素
+  + eq(4)获取索引4的元素
+  + gt(4)索引大于4的所有元素
+  + lt(4)索引小于4的所有的元素
   ```
     $("#uu>li:eq(4)").css("backgroundColor","red");
     $("#uu>li:gt(4)").css("backgroundColor","red");
