@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
     <style>
         select {
             width: 100px;
@@ -23,7 +24,8 @@
 <input type="button" id="btn4" value="&lt;"/>
 <select name="" id="right" multiple="multiple"></select>
 <script>
-    var btn1 = document.getElementById("btn1");
+	//js处理
+ /* var btn1 = document.getElementById("btn1");
     var btn2 = document.getElementById("btn2");
     var btn3 = document.getElementById("btn3");
     var btn4 = document.getElementById("btn4");
@@ -52,7 +54,7 @@
         move(left,right,false);
     }
 
-    btn4.onclick=function(){
+   btn4.onclick=function(){
         //var options=right.children;
         //for (var i = 0; i < options.length; i++) {
         //    var option = options[i];
@@ -74,11 +76,30 @@
                 i--;
             }
         };
-   }
+   }*/
 
+  //jquery 处理
 
-
-
+    $(function(){
+    	 $("#btn1").click(function(){
+		   	 $("#right").append($("#left>option"))
+		  })
+    })	
+    $(function(){
+    	 $("#btn2").click(function(){
+		   	 $("#left").append($("#right>option"))
+		  })
+    })	
+    $(function(){
+    	 $("#btn3").click(function(){
+		   	 $("#right").append($("#left>option:selected"))
+		  })
+    })	
+    $(function(){
+    	 $("#btn4").click(function(){
+		   	 $("#right").append($("#left>option:selected"))
+		  })
+    })	
 
 </script>
 </body>

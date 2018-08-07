@@ -3,6 +3,7 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
+    
     <style>
         * {
             padding: 0;
@@ -92,8 +93,10 @@
         </tbody>
     </table>
 </div>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
 <script>
-    var all = document.getElementById("j_cbAll");
+	//js 处理
+    /*var all = document.getElementById("j_cbAll");
     var tb = document.getElementById("j_tb");
     var inputs = tb.getElementsByTagName("input");
     all.onclick = function () {
@@ -111,15 +114,34 @@
                     break;
                  }
              };
-             if(flag===true){
-                all.checked=true;
-             }
-             if(flag===false){
-                all.checked=false;
-             }
+             all.checked=flag;
+             //if(flag===true){
+               // all.checked=true;
+             //}
+             //if(flag===false){
+                //all.checked=false;
+             //}
          }
-     };
-
+     };*/
+    //jquery 处理
+     
+     $(function() {
+     	 $("#j_cbAll").click(function(){
+     	 	 var ck=$(this).prop("checked");
+     	 	 console.log(ck);
+     	 	 $("#j_tb").find(":checkbox").prop("checked",ck);
+     	 })
+     	$("#j_tb").find(":checkbox").click(function(){
+     		
+     	 	 var length1=$("#j_tb").find(":checkbox").length;
+     	 	 var length2=$("#j_tb").find(":checked").length;
+     	 	 if(length1==length2){
+     	 	 	 $("#j_cbAll").prop("checked",true);
+     	 	 }else{
+     	 	 	$("#j_cbAll").prop("checked",false);
+     	 	 }
+     	 })
+     })
 
 </script>
 </body>
