@@ -58,4 +58,5 @@
 	$(this).css("backgroundColor","");
     }});
    ```
-  
+  ### 事件触发
+    - trigger() 方法触发被选元素的指定事件类型。
