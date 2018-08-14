@@ -50,7 +50,26 @@ father.removeChild(要移除的子节点对象);
   事件目标:触发事件的元素
   var target = event.target || event.srcElement;
   ```
+### 查询选择器
+```
+  //querySelector:获取单个元素，如果获取的元素不止一个，那么只会返回满足条件的第一个元素
+  //参数要求：如果是类选择器，必须添加.  如果是id选择器， 必须添加# ,否则当成标签处理
+  var javaLi=document.querySelector(".green");
+  console.log(javaLi);
+  //querySelectorAll获取满足条件的所有元素--数组
+  var allLi=document.querySelectorAll("li");
+  console.log(allLi);
   
+  //类样式操作
+  //add:为元素添加指定名称的样式.一次只能添加一个样式
+  document.querySelector("li").classList.add("red");
+  //remove:为元素移除指定名称的样式(不是移除class属性)，一次也只能移除一个
+  document.querySelector(".blue").classList.remove("blue");
+  //toggle：切换元素的样式：如果元素之前没有指定名称的样式则添加。如果有则移除
+  document.querySelectorAll("li")[2].classList.toggle("green");
+  //contains:判断元素是否包含指定名称的样式，返回true/false
+  document.querySelectorAll("li")[3].classList.contains("red");
+  ```
 ### 事件监听
   - 绑定事件监听 
    ```
