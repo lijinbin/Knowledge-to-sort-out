@@ -109,4 +109,14 @@
 
 - `git clone [地址]`
  + 会得到远程仓储相同的数据,如果多次执行会覆盖本地内容。
- 
+## ssh方式上传代码
+- 公钥 私钥,两者之间是有关联的。
+- 生成公钥,和私钥
+    + `ssh-keygen -t rsa -C "xiaoming@sina.com"`
+
+## 在push和pull操作进
+- 先pull , 再push
+
+- 当我们在push时，加上-u参数，那么在下一次push时
+  我们只需要写上`git push`就能上传我们的代码。(加上-u之后，git会把
+  当前分支与远程的指定的分支进行关联。git push origin master)
