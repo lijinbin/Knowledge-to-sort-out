@@ -62,4 +62,26 @@
    - border-image-source:url("../images/border1.jpg")
    - 可以指定边框图片的路径,默认只是填充到容器的四个角点
    - 边框图片的宽度。如果没有设置这个属性，那么宽度默认就是元素的原始的边框宽度
+#### 多列布局(column-count)
+   - 设置多列布局
+     ```
+       1.设置列数
+       column-count: 3;
+       2.添加列间隙样式,与边框样式的添加一样
+       column-rule: dashed 3px red;
+       3.设置列间隙大小
+       column-gap: 50px;
+       4.设置列宽
+       原则：取大优先
+       1.如果人为设置宽度更大，则取更大的值，但是会填充整个屏幕，意味最终的宽度可能也会大于设置的宽度--填充满整个屏幕
+       2.如果人为设置宽度更小，使用默认计算的宽度
+       column-width: 200px;       
+      ```
+#### 伸缩布局
+   - 弹性盒子由弹性容器(Flex container)和弹性子元素(Flex item)组成。弹性容器通过设置 display 属性的值为 flex 或 inline-flex将其定义为弹性容器。
+     ```
+       1.flex-direction
+       
+      ```
+
 
