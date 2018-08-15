@@ -22,3 +22,16 @@
             }
         </script>
     ```
+ #### 网络接口
+  - ononline:当网络连接的时候触发
+    ```
+      window.addEventListener("online",function(){
+        alert("网络连通了...");
+      });
+    ```
+  - onoffline:当网络断开的时候触发
+    ```
+      window.addEventListener("offline",function(){
+        alert("网络断开了...");
+      })
+    ```
