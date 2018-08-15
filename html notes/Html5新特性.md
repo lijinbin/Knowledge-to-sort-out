@@ -35,3 +35,8 @@
         alert("网络断开了...");
       })
     ```
+  #### 全屏接口
+   - 1.requestFullScreen():开启全屏显示:不同浏览器需要添加不同的前缀,chrome:webkit   firefox:moz   ie:ms   opera:o
+   - 2.cancelFullScreen():退出全屏显示:也添加前缀，在不同的浏览器下.退出全屏只能使用document来实现
+   - 3.fullScreenElement:是否是全屏状态，也只能使用document进行判断
+    
