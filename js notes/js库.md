@@ -12,3 +12,7 @@
 -  http://fgm.cc/learn/  原生JavaScript学习
 
 -  https://www.mipengine.org/doc/00-mip-101.html  移动网页加速器
+- h5编辑器
+  + https://xiumi.us
+  + https://www.ih5.cn
+  + http://www.e7wei.com/
