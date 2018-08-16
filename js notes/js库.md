@@ -1,5 +1,6 @@
 ### js库
 
+- iScroll.js 一个可以实现客户端原生滚动效果的类库。
 -  Moment.js--js日期处理类库
 -  Modernizr     用于检测用户浏览器的html5和css3特性
 -  Covering-Bad
