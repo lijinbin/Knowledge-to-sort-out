@@ -92,13 +92,13 @@
    + endsWith
      ```
        let str="1.txt";
-	if(str.endsWith("txt")){
+	 if(str.endsWith("txt")){
 	   alert("文本")
-	}else if(str.endsWith("jpg")){
+	 }else if(str.endsWith("jpg")){
 	    alert("图片")
-	}else{
+	 }else{
 	   alert("其他")
-	}
+	 }
       ```
   - 字符串模板 字符串拼接 
     + 直接把东西塞到字符串里面  $(东西)
