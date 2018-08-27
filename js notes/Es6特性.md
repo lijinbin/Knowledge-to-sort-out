@@ -148,8 +148,18 @@
       ```
    -  Promise.race    竞速
 #### generator
- ```
-    function *show(){
-       yield
-     }	
- ```
+  - 在有逻辑的情况下用generator异步操作相比promise更方便一点
+	 ```
+	     //带逻辑-generator
+		runner(function *(){
+		  let userData=yield $.ajax({url: 'getUserData', dataType: 'json'});
+
+		  if(userData.type=='VIP'){
+		    let items=yield $.ajax({url: 'getVIPItems', dataType: 'json'});
+		  }else{
+		    let items=yield $.ajax({url: 'getItems', dataType: 'json'});
+		  }
+
+		  //生成、...
+		});
+	 ```
