@@ -79,8 +79,8 @@
 ####  字符串
   -  多了两个新方法
    + startsWith
-        ```
-	   let str="https://www.baidu.com/";
+     ```
+       let str="https://www.baidu.com/";
 	    if(str.startsWith("https://")){
 	       alert("加密地址")
 	    }else if(str.startsWith("http://")){
@@ -88,8 +88,8 @@
 	    }else{
 	      alert("其他")
 	    }
-         ```  
-    + endsWith
+      ```
+   + endsWith
          ```
 	        let str="1.txt";
 		if(str.endsWith("txt")){
