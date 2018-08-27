@@ -80,7 +80,7 @@
   -  多了两个新方法
    + startsWith
         ```
-		let str="https://www.baidu.com/";
+	   let str="https://www.baidu.com/";
 	    if(str.startsWith("https://")){
 	       alert("加密地址")
 	    }else if(str.startsWith("http://")){
@@ -91,15 +91,15 @@
          ```  
     + endsWith
          ```
-		 let str="1.txt";
-		 if(str.endsWith("txt")){
-		       alert("文本")
-		    }else if(str.endsWith("jpg")){
-		       alert("图片")
-		    }else{
-		      alert("其他")
-		    }
-          ```  
+	        let str="1.txt";
+		if(str.endsWith("txt")){
+		   alert("文本")
+		}else if(str.endsWith("jpg")){
+		    alert("图片")
+		}else{
+		   alert("其他")
+		}
+           ```  
   - 字符串模板 字符串拼接 
     + 直接把东西塞到字符串里面  $(东西)
     + 可以折行
