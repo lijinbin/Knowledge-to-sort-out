@@ -38,6 +38,10 @@
 	  *展开后的效果，跟直接把数组的内容写在这儿一样
      ```
   + 默认参数
+     ``` 
+         $('#div1').animate({width: '200px'});
+         $('#div1').animate({width: '200px'}, 1000);//'1000可写可不写，不写按默认执行，写的话按这个执行
+      ```
 ####  解构赋值
  - 1.左右两边结构必须一样
  - 2.右边必须是个东西
@@ -47,25 +51,25 @@
 #### 数组
   -  map     映射：一个对一个
      ```
-	  let arr=[12,5,8];
-     let result=arr.map(item=>item*2);
-     alert(result);//24,10,16
-   ```
+	let arr=[12,5,8];
+        let result=arr.map(item=>item*2);
+        alert(result);//24,10,16
+    ```
   -  reduce  汇总：一堆->一个
      ```
-	  let arr=[12,5,8];
-     let result=arr.map(item=>item*2);
-     alert(result);//24,10,16
-   ```
+	let arr=[12,5,8];
+        let result=arr.map(item=>item*2);
+        alert(result);//24,10,16
+      ```
   -  filter   过滤
       ```
-	  let arr=[12,5,8,99,27,36,75,11];
-      let result=arr.filter(item=>item%3==0);
-      alert(result);//12,99,27,36,75
-   ```
+	 let arr=[12,5,8,99,27,36,75,11];
+         let result=arr.filter(item=>item%3==0);
+         alert(result);//12,99,27,36,75
+      ```
   -  forEach 遍历
       ```
-		  let arr=[12,5,8,9];
+	     let arr=[12,5,8,9];
 	      arr.forEach((item,index)=>{
 	       alert(index+': '+item); //0:12 1:5 2:8 3:9
 	     });
@@ -84,7 +88,7 @@
 	    }
        ```  
     + endsWith
-	     ```
+       ```
 		 let str="1.txt";
 		 if(str.endsWith("txt")){
 		       alert("文本")
@@ -119,7 +123,7 @@
 	    }
 	  }
 	  
-    ```
+     ```
 ####  json
    - JSON对象
 	+  JSON.stringify
