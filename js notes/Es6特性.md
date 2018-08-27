@@ -18,13 +18,13 @@
 #### 函数
  - 箭头函数
    ```
-	 function (参数,参数){
+   function (参数,参数){
        函数体
     }
     (参数,参数)=>{
       函数体
     }
-	 1.如果有且仅有1个参数，()可以省
+     1.如果有且仅有1个参数，()可以省
      2.如果函数体只有一句话，而且是return，{}可以省
    ```
  - 函数的参数
@@ -51,15 +51,17 @@
 #### 数组
   -  map     映射：一个对一个
      ```
-	let arr=[12,5,8];
+        let arr=[12,5,8];
         let result=arr.map(item=>item*2);
         alert(result);//24,10,16
-    ```
+     ```
   -  reduce  汇总：一堆->一个
      ```
-	let arr=[12,5,8];
-        let result=arr.map(item=>item*2);
-        alert(result);//24,10,16
+	 let arr=[12,43,56,32];
+         let result=arr.reduce(function(tmp,item,index){
+         return tmp+item;//143
+    })
+    alert(result);
       ```
   -  filter   过滤
       ```
@@ -69,15 +71,15 @@
       ```
   -  forEach 遍历
       ```
-	     let arr=[12,5,8,9];
-	      arr.forEach((item,index)=>{
-	       alert(index+': '+item); //0:12 1:5 2:8 3:9
-	     });
-       ```  
+       let arr=[12,5,8,9];
+       arr.forEach((item,index)=>{
+         alert(index+': '+item); //0:12 1:5 2:8 3:9
+        });
+      ```  
 ####  字符串
   -  多了两个新方法
     + startsWith
-	     ```
+       ```
 		let str="https://www.baidu.com/";
 	    if(str.startsWith("https://")){
 	       alert("加密地址")
