@@ -148,7 +148,7 @@
       ```
    -  Promise.race    竞速
 #### generator
-  - 在有逻辑的情况下用generator异步操作相比promise更方便一点
+  - 在有逻辑的情况下用generator异步操作相比promise更方便一点，但是依赖于runner
 	 ```
 	     //带逻辑-generator
 		runner(function *(){
