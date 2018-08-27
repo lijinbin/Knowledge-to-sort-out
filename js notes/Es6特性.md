@@ -36,12 +36,8 @@
 	2.展开数组
 	   ...arr    =>    1,2,3
 	  *展开后的效果，跟直接把数组的内容写在这儿一样
-   ```
+     ```
   + 默认参数
-   ```
-	 $('#div1').animate({width: '200px'});
-    $('#div1').animate({width: '200px'}, 1000);//'1000可写可不写，不写按默认执行，写的话按这个执行
-   ```
 ####  解构赋值
  - 1.左右两边结构必须一样
  - 2.右边必须是个东西
@@ -76,7 +72,7 @@
        ```  
 ####  字符串
   -  多了两个新方法
-	  + startsWith
+    + startsWith
 	     ```
 		let str="https://www.baidu.com/";
 	    if(str.startsWith("https://")){
@@ -87,7 +83,7 @@
 	      alert("其他")
 	    }
        ```  
-	  + endsWith
+    + endsWith
 	     ```
 		 let str="1.txt";
 		 if(str.endsWith("txt")){
@@ -98,7 +94,7 @@
 		      alert("其他")
 		    }
        ```  
-  - 字符串模板 字符串拼接 ``
+  - 字符串模板 字符串拼接 
     + 直接把东西塞到字符串里面  $(东西)
     + 可以折行
 ####  面向对象
@@ -146,8 +142,8 @@
       ```
    -  Promise.race    竞速
 #### generator
-		```
-		     function *show(){
-			     yield
-			  }
-	    ```
+ ```
+    function *show(){
+       yield
+     }	
+ ```
