@@ -76,6 +76,15 @@
          alert(index+': '+item); //0:12 1:5 2:8 3:9
         });
       ```  
+  - findIndex()//查找目标元素，找到就返回元素的位置，找不到就返回-1
+  - some()//遍历数组每一项，有一项返回true,则停止遍历，结果返回true。不改变原数组
+     ```
+       var arr=[2,4,6,8];
+        arr.some((item,i)=>{
+         console.log(item+': '+i);
+	 //return true 停止遍历
+       })
+      ```  
 ####  字符串
   -  多了两个新方法
    + startsWith
