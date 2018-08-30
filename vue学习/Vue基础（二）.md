@@ -147,3 +147,45 @@ Vue.config.keyCodes.f2 = 113;
  ```
 ####  [Vue中的动画](https://cn.vuejs.org/v2/guide/transitions.html)
 为什么要有动画：动画能够提高用户的体验，帮助用户更好的理解页面中的功能；
++ 使用过渡类名实现过渡
+```
+1. HTML结构：
+<div id="app">
+    <input type="button" value="toggle" name=""  @click="flag=!flag">
+    <!-- 使用 transition 将需要过渡的元素包裹起来 -->
+    <transition name="fade">//这里的name属性可以自定义 写样式时替代v-前缀 即是fade-enter
+      <h3 v-show="flag">hello world</h3>
+    </transition>
+  </div>
+2. VM 实例：
+// 创建 Vue 实例，得到 ViewModel
+var vm = new Vue({
+  el: '#app',
+  data: {
+    flag: false
+  },
+  methods: {}
+});
+3. 定义两组类样式：
+  /* 定义进入和离开时候的过渡状态 */
+    .v-enter-active,
+    .v-leave-active {
+      transition: all 0.2s ease;
+    }
+
+    /* 定义进入过渡的开始状态 和 离开过渡的结束状态 */
+    .v-enter,
+    .v-leave-to {
+      opacity: 0;
+      transform: translateX(100px);
+    }
+```
++ [使用第三方 CSS 动画库](https://cn.vuejs.org/v2/guide/transitions.html#自定义过渡类名)
+```
+ 1. 导入动画类库：
+ <link rel="stylesheet" href="./lib/animate.css">
+ 2. 定义 transition 及属性：
+ <transition enter-active-class="bounceIn" leave-active-class="bounceOut"  :duration="{enter:200,leave:1000}">        
+   <h3 v-if="flag" class="animated">hello world</h3>
+</transition>
+```
