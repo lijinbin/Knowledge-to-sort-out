@@ -145,7 +145,7 @@ Vue.config.keyCodes.f2 = 113;
  ```
   Vue.http.options.emulateJSON = true;
  ```
-####  [Vue中的动画](https://cn.vuejs.org/v2/guide/transitions.html)
+####  [Vue中的动画与过渡](https://cn.vuejs.org/v2/guide/transitions.html)
 为什么要有动画：动画能够提高用户的体验，帮助用户更好的理解页面中的功能；
 + 使用过渡类名实现过渡
 ```
@@ -188,4 +188,96 @@ var vm = new Vue({
  <transition enter-active-class="bounceIn" leave-active-class="bounceOut"  :duration="{enter:200,leave:1000}">        
    <h3 v-if="flag" class="animated">hello world</h3>
 </transition>
+```
++  使用动画钩子函数
+1. 定义 transition 组件以及三个钩子函数：
+```
+<div id="app">
+    <input type="button" value="快到碗里来" name="" @click="flag=!flag">
+    <transition @before-enter="beforeEnter"  @enter="enter" @after-enter="afterEnter">
+        <div class="ball" v-show="flag"></div>
+    </transition>
+</div>
+```
+2. 定义三个 methods 钩子方法：
+```
+methods: {
+  beforeEnter(el){
+     el.style.transform="translate(0,0)"
+   },
+   enter(el,done){
+     el.offsetWidth//这句话，没有实际的作用，但是，如果不写，出不来动画效果；可以认为 el.offsetWidth 会强制动画刷新
+     el.style.transform="translate(150px,450px)"
+     done()//done 是 afterEnter 函数的引用
+   },
+   afterEnter(el){
+     this.flag = !this.flag
+   }
+}
+```
+3. 定义动画过渡时长和样式：
+```
+.ball {
+ width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: red;
+  transition: all 1s ease;
+}
+```
++ [列表过渡](https://cn.vuejs.org/v2/guide/transitions.html#列表的进入和离开过渡)
+1. 定义过渡样式：
+```
+<style>
+    .list-enter,
+    .list-leave-to {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+
+    .list-enter-active,
+    .list-leave-active {
+      transition: all 0.3s ease;
+    }
+    
+   /* 下面的 .v-move 和 .v-leave-active 配合使用，能够实现列表后续的元素，渐渐地漂上来的效果 */
+    .v-move {
+      transition: all 0.6s ease;
+    }
+    .v-leave-active{
+      position: absolute;
+    }
+</style>
+```
+
+2. 定义DOM结构，其中，需要使用 transition-group 组件把v-for循环的列表包裹起来：
+```
+  <div id="app">
+    <input type="text" v-model="txt" @keyup.enter="add">
+   //给 ransition-group 添加 appear 属性，实现页面刚展示出来时候，入场时候的效果
+   //通过 为 transition-group 元素，设置 tag 属性，指定 transition-group 渲染为指定的元素，如果不指定 tag 属性，默认，渲染为 span 标签
+    <transition-group appear tag="ul" name="list">
+      <li v-for="(item, i) in list" :key="i" @click="del(i)">{{item}}</li>
+    </transition-group>
+  </div>
+```
+3. 定义 VM中的结构：
+```
+    // 创建 Vue 实例，得到 ViewModel
+    var vm = new Vue({
+      el: '#app',
+      data: {
+        txt: '',
+        list: [1, 2, 3, 4]
+      },
+      methods: {
+        add() {
+          this.list.push(this.txt);
+          this.txt = '';
+        },
+        del(i) {
+          this.list.splice(i, 1)
+        }
+      }
+    });
 ```
