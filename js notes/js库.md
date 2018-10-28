@@ -18,23 +18,4 @@
   + https://www.ih5.cn
   + http://www.e7wei.com/
 
-1.正则表达式的作用？
-正则表达式主要是针对字符串进行操作，可以简化对字符串的复杂操作，其主要功能有匹配、切割、替换、获取。
-2.js运行机制
-单线程机制：同一时间只能做一件事，当有多个任务时，只能按照一个顺序一个完成了再执行下一个
-任务队列：同步与异步 关注的是消息通知机制
-          阻塞和非阻塞 注的是程序在等待调用结果（消息，返回值）时的状态
-3.什么是跨域？
-跨域，指的是浏览器不能执行其他网站的脚本。它是由浏览器的同源策略造成的，是浏览器对JavaScript施加的安全限制。
-解决办法：1、JSONP
-          2、nginx反向代理
-          3、PHP端修改header
-          4、通过 window.name 实现跨域
-4.Json对象转换为json字符串
-  for循环
-  JSON.stringify(userinfo);
 
-  json字符串转换为Json对象
-  使用Ajax 的转换对象  $.parseJSON(workJsonString);//使用Ajax
-  JSON.parse(workJsonString)
-  使用eval()对象
